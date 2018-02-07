@@ -5,6 +5,7 @@ using System.Web;
 
 namespace GraGieldowa.Models
 {
+//gracz giełdowy
     public class Gracz  
     {
         public Gracz(int iD, decimal srodki, decimal iloscAkcji) 
