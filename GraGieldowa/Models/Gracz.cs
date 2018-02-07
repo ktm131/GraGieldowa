@@ -7,7 +7,7 @@ namespace GraGieldowa.Models
 {
     public class Gracz
     {
-        public Gracz(int iD, decimal srodki, decimal iloscAkcji)
+        public Gracz(int iD, decimal srodki, decimal iloscAkcji) 
         {
             this.ID = iD;
             this.Srodki = srodki;
