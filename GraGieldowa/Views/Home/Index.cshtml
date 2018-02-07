@@ -1,0 +1,36 @@
+﻿@using GraGieldowa.Models
+
+@model UstawieniaGryModel
+
+
+@using (Html.BeginForm())
+{
+    @Html.ValidationSummary()
+
+    @Html.LabelFor(m=>m.IloscGraczy)
+    @Html.TextBoxFor(m=>m.IloscGraczy, new { type = "number", min="1", max="10" })
+    <br />
+    @Html.LabelFor(m => m.IloscGrubasow)
+    @Html.TextBoxFor(m => m.IloscGrubasow, new { type = "number", min = "1", max = "5" })
+    <br />
+    @Html.LabelFor(m => m.IloscAkcji)
+    @Html.TextBoxFor(m => m.IloscAkcji, new { type = "number", min = "100", max = "1000000" })
+    <br />
+    @Html.LabelFor(m => m.IloscPieniedzy)
+    @Html.TextBoxFor(m => m.IloscPieniedzy, new { type = "number", min = "100", max = "1000000" })
+    <br />
+    @Html.LabelFor(m => m.ProcentAkcjiGracze)
+    @Html.TextBoxFor(m => m.ProcentAkcjiGracze, new { type = "number", min = "1", max = "100" })
+    <br />
+    @Html.LabelFor(m => m.ProcentAkcjiGrubasy)
+    @Html.TextBoxFor(m => m.ProcentAkcjiGrubasy, new { type = "number", min = "1", max = "100" })
+    <br />
+    @Html.LabelFor(m => m.ProcentPieniedzyGracze)
+    @Html.TextBoxFor(m => m.ProcentPieniedzyGracze, new { type = "number", min = "1", max = "100" })
+    <br />
+    @Html.LabelFor(m => m.ProcentPieniendzyGrubasy)
+    @Html.TextBoxFor(m => m.ProcentPieniendzyGrubasy, new { type = "number", min = "1", max = "100" })
+    <br />
+
+    <input type="submit" />
+}

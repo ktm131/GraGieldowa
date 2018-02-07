@@ -1,0 +1,48 @@
+﻿using GraGieldowa.Models;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web;
+using System.Web.Mvc;
+
+namespace GraGieldowa.Controllers
+{
+    public class HomeController : Controller
+    {
+        [HttpGet]
+        public ActionResult Index()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public ActionResult Index(UstawieniaGryModel model)
+        {
+            if(ModelState.IsValid)
+            {
+                Session["Ustawienia"] = model;
+
+                return RedirectToAction("Index", "Game");
+            }
+            else
+            {
+                return View(model);
+            }
+           
+        }
+
+        public ActionResult About()
+        {
+            ViewBag.Message = "Your application description page.";
+
+            return View();
+        }
+
+        public ActionResult Contact()
+        {
+            ViewBag.Message = "Your contact page.";
+
+            return View();
+        }
+    }
+}
