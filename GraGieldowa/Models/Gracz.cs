@@ -5,7 +5,7 @@ using System.Web;
 
 namespace GraGieldowa.Models
 {
-    public class Gracz
+    public class Gracz  
     {
         public Gracz(int iD, decimal srodki, decimal iloscAkcji) 
         {
